@@ -19,8 +19,7 @@ const open = () => {
     let artistName = status.track.artist_resource.name
     let query = encodeURIComponent(`${artistName} - ${trackName}`)
 
-    let url = 'https://genius.com/search?q='
-
-    shell.openExternal(`${url}${query}`)
+    let url = 'https://duckduckgo.com/?q=site:https://genius.com ${query} !'
+    shell.openExternal(url)
   })
 }
